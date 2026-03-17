@@ -1,0 +1,110 @@
+import React from 'react';
+import { motion } from 'motion/react';
+import { CheckCircle2, Droplets, Zap, Wrench, Car, Home } from 'lucide-react';
+
+export default function Industries() {
+  const industries = [
+    {
+      title: 'Cleaning Companies',
+      desc: 'Capture missed enquiries and book cleaning jobs automatically. Perfect for domestic and commercial cleaners.',
+      icon: <Droplets className="text-blue-500" size={40} />,
+      image: 'https://picsum.photos/seed/cleaning/800/600',
+    },
+    {
+      title: 'Plumbers',
+      desc: 'Convert missed calls into booked repair jobs. Manage emergency call-outs and routine maintenance with ease.',
+      icon: <Wrench className="text-slate-600" size={40} />,
+      image: 'https://picsum.photos/seed/plumbing/800/600',
+    },
+    {
+      title: 'Electricians',
+      desc: 'Schedule jobs automatically. Keep track of certificates, recurring inspections, and new installations.',
+      icon: <Zap className="text-amber-500" size={40} />,
+      image: 'https://picsum.photos/seed/electrician/800/600',
+    },
+    {
+      title: 'Mechanics',
+      desc: 'Capture missed service enquiries. Automate MOT reminders and service bookings for your garage.',
+      icon: <Car className="text-rose-500" size={40} />,
+      image: 'https://picsum.photos/seed/mechanic/800/600',
+    },
+    {
+      title: 'Handymen',
+      desc: 'Keep jobs organised and customers informed. Manage multiple small tasks and larger projects efficiently.',
+      icon: <Home className="text-emerald-600" size={40} />,
+      image: 'https://picsum.photos/seed/handyman/800/600',
+    },
+  ];
+
+  return (
+    <div className="bg-slate-50 py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-20 text-center">
+          <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl">
+            Built for Your Business
+          </h1>
+          <p className="mx-auto max-w-2xl text-lg text-slate-600">
+            JobFlowPro is specifically designed for local service businesses and tradespeople.
+          </p>
+        </div>
+
+        <div className="grid gap-12">
+          {industries.map((industry, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className={`flex flex-col overflow-hidden rounded-3xl bg-white shadow-xl lg:flex-row ${
+                idx % 2 === 1 ? 'lg:flex-row-reverse' : ''
+              }`}
+            >
+              <div className="lg:w-1/2">
+                <img
+                  src={industry.image}
+                  alt={industry.title}
+                  className="h-full w-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="flex flex-col justify-center p-8 lg:w-1/2 lg:p-16">
+                <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-slate-50">
+                  {industry.icon}
+                </div>
+                <h2 className="mb-4 text-3xl font-bold text-slate-900">{industry.title}</h2>
+                <p className="mb-8 text-lg leading-relaxed text-slate-600">{industry.desc}</p>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3 text-slate-700">
+                    <CheckCircle2 className="text-emerald-600" size={20} />
+                    <span>24/7 Enquiry Capture</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-slate-700">
+                    <CheckCircle2 className="text-emerald-600" size={20} />
+                    <span>Instant SMS Responses</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-slate-700">
+                    <CheckCircle2 className="text-emerald-600" size={20} />
+                    <span>Automated Booking Calendar</span>
+                  </div>
+                </div>
+                <button className="mt-10 inline-flex items-center justify-center rounded-full bg-emerald-600 px-8 py-3 font-bold text-white transition-all hover:bg-emerald-700 active:scale-95">
+                  Learn More for {industry.title}
+                </button>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="mt-24 text-center">
+          <h3 className="mb-6 text-2xl font-bold text-slate-900">Don't see your industry?</h3>
+          <p className="mb-10 text-slate-600">
+            If you're a local service business that takes bookings, JobFlowPro will work for you.
+          </p>
+          <button className="rounded-full border-2 border-slate-200 bg-white px-10 py-4 text-lg font-bold text-slate-700 transition-all hover:border-emerald-600 hover:text-emerald-600">
+            Chat with our team
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
