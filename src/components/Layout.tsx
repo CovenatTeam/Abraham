@@ -124,8 +124,8 @@ export default function Layout({ children, currentPage, onPageChange }: LayoutPr
               <h4 className="mb-4 text-xs font-bold uppercase tracking-widest text-slate-400">Support</h4>
               <ul className="space-y-2 text-sm text-slate-600">
                 <li><button onClick={() => onPageChange('book-demo')}>Book a Demo</button></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
+                <li><button onClick={() => onPageChange('privacy-policy')}>Privacy Policy</button></li>
+                <li><button onClick={() => onPageChange('terms-of-service')}>Terms of Service</button></li>
               </ul>
             </div>
           </div>

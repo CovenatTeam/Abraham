@@ -6,6 +6,8 @@ import HowItWorks from './pages/HowItWorks';
 import Industries from './pages/Industries';
 import Pricing from './pages/Pricing';
 import BookDemo from './pages/BookDemo';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 
 export default function App() {
   const [currentPage, setCurrentPage] = React.useState('home');
@@ -22,6 +24,10 @@ export default function App() {
         return <Pricing />;
       case 'book-demo':
         return <BookDemo />;
+      case 'privacy-policy':
+        return <PrivacyPolicy />;
+      case 'terms-of-service':
+        return <TermsOfService />;
       default:
         return <Home onPageChange={setCurrentPage} />;
     }

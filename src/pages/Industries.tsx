@@ -95,14 +95,61 @@ export default function Industries() {
           ))}
         </div>
 
-        <div className="mt-24 text-center">
-          <h3 className="mb-6 text-2xl font-bold text-slate-900">Don't see your industry?</h3>
-          <p className="mb-10 text-slate-600">
-            If you're a local service business that takes bookings, JobFlowPro will work for you.
-          </p>
-          <button className="rounded-full border-2 border-slate-200 bg-white px-10 py-4 text-lg font-bold text-slate-700 transition-all hover:border-emerald-600 hover:text-emerald-600">
-            Chat with our team
-          </button>
+        <div className="mt-24 max-w-2xl mx-auto">
+          <div className="text-center mb-12">
+            <h3 className="mb-6 text-3xl font-bold text-slate-900">Don't see your industry?</h3>
+            <p className="mb-10 text-slate-600">
+              If you're a local service business that takes bookings, JobFlowPro will work for you. 
+              Fill out the form below and our team will get in touch.
+            </p>
+          </div>
+          
+          <form className="bg-white p-8 rounded-3xl shadow-xl border border-slate-100 text-left">
+            <div className="grid gap-6 md:grid-cols-2 mb-6">
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 mb-2">Full Name</label>
+                <input 
+                  type="text" 
+                  className="w-full rounded-xl border border-slate-200 px-4 py-3 focus:border-emerald-600 focus:outline-none focus:ring-1 focus:ring-emerald-600"
+                  placeholder="John Doe"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 mb-2">Email Address</label>
+                <input 
+                  type="email" 
+                  className="w-full rounded-xl border border-slate-200 px-4 py-3 focus:border-emerald-600 focus:outline-none focus:ring-1 focus:ring-emerald-600"
+                  placeholder="john@example.com"
+                />
+              </div>
+            </div>
+            
+            <div className="mb-6">
+              <label className="block text-sm font-semibold text-slate-700 mb-2">Industry</label>
+              <input 
+                type="text" 
+                className="w-full rounded-xl border border-slate-200 px-4 py-3 focus:border-emerald-600 focus:outline-none focus:ring-1 focus:ring-emerald-600"
+                placeholder="e.g. Landscaping, Pest Control"
+              />
+            </div>
+            
+            <div className="mb-8">
+              <label className="block text-sm font-semibold text-slate-700 mb-2">How can we help?</label>
+              <textarea 
+                rows={4}
+                className="w-full rounded-xl border border-slate-200 px-4 py-3 focus:border-emerald-600 focus:outline-none focus:ring-1 focus:ring-emerald-600"
+                placeholder="Tell us about your business needs..."
+              ></textarea>
+            </div>
+            
+            <button 
+              type="submit"
+              className="w-full rounded-full bg-emerald-600 py-4 text-lg font-bold text-white transition-all hover:bg-emerald-700 active:scale-95"
+              onClick={(e) => e.preventDefault()}
+            >
+              Send Message
+            </button>
+          </form>
         </div>
       </div>
     </div>
