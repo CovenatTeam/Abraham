@@ -20,8 +20,10 @@ export default function App() {
         return <HowItWorks />;
       case 'industries':
         return <Industries />;
-      case 'pricing':
-        return <Pricing />;
+      case 'pricing-landlords':
+        return <Pricing onPageChange={setCurrentPage} type="landlords" />;
+      case 'pricing-trades':
+        return <Pricing onPageChange={setCurrentPage} type="trades" />;
       case 'book-demo':
         return <BookDemo />;
       case 'privacy-policy':

@@ -31,36 +31,9 @@ export default function TermsOfService() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-slate-900 mb-4">4. Prohibited Conduct</h2>
-            <p>
-              You agree not to:
-            </p>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>Use the service for any illegal purpose</li>
-              <li>Interfere with or disrupt the service or servers</li>
-              <li>Attempt to gain unauthorized access to any part of the service</li>
-              <li>Transmit any viruses or malicious code</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold text-slate-900 mb-4">5. Limitation of Liability</h2>
+            <h2 className="text-2xl font-semibold text-slate-900 mb-4">4. Limitation of Liability</h2>
             <p>
               To the maximum extent permitted by law, JobFlowPro shall not be liable for any indirect, incidental, special, or consequential damages resulting from the use or inability to use our services.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold text-slate-900 mb-4">6. Governing Law</h2>
-            <p>
-              These Terms of Service shall be governed by and construed in accordance with the laws of the United Kingdom.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold text-slate-900 mb-4">7. Contact Us</h2>
-            <p>
-              If you have any questions about these Terms of Service, please contact us at support@jobflowpro.com.
             </p>
           </section>
         </div>

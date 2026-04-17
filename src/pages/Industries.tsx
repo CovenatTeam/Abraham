@@ -34,6 +34,12 @@ export default function Industries() {
       icon: <Home className="text-emerald-600" size={40} />,
       image: 'https://picsum.photos/seed/handyman/800/600',
     },
+    {
+      title: 'Landlords',
+      desc: 'Handle maintenance issues without the hassle. Tenants report problems, contractors are notified, and updates are sent automatically.',
+      icon: <Home className="text-purple-600" size={40} />,
+      image: 'https://picsum.photos/seed/landlord/800/600',
+    },
   ];
 
   return (
